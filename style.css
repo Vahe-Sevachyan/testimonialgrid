@@ -1,0 +1,8 @@
+/*Reset Styles*/
+
+body {
+    background-color: darkgray;
+}
+.grid-section {
+    border: 1px solid black;
+}
