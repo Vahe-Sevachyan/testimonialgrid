@@ -2,7 +2,39 @@
 
 body {
     background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.grid-container {
+    justify-content: center;
+    border: 1px solid red;
+    width: 1440px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        "one one two three"
+        "four five five three ";
 }
 .grid-section {
     border: 1px solid black;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
 }
