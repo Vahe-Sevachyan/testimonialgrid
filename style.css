@@ -9,13 +9,16 @@ body {
     height: 100vh;
 }
 .grid-container {
-    justify-content: center;
+    height: 100vh;
     border: 1px solid red;
     width: 1440px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 1fr 2fr 1fr;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 300px 150px 300px 300px;
     gap: 2rem;
+    padding: 1rem;
     grid-template-areas:
         "one one two three"
         "four five five three ";
@@ -31,6 +34,9 @@ body {
 }
 .three {
     grid-area: three;
+    /*font-size: 2vh;*/
+    line-height: 3vh;
+    /*height: 100vh;*/
 }
 .four {
     grid-area: four;
