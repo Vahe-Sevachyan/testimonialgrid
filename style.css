@@ -7,11 +7,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.attribution {
+    margin-bottom: 10px;
 }
 .grid-container {
     height: 100vh;
-    border: 1px solid red;
-    width: 1440px;
+    /*border: 1px solid red;*/
+    /*width: 1440px;*/
     display: grid;
     justify-content: center;
     align-content: center;
@@ -25,6 +30,7 @@ body {
 }
 .grid-section {
     border: 1px solid black;
+    padding: 20px;
 }
 .one {
     grid-area: one;
@@ -34,13 +40,61 @@ body {
 }
 .three {
     grid-area: three;
-    /*font-size: 2vh;*/
-    line-height: 3vh;
-    /*height: 100vh;*/
+    /*line-height: 2.5vh;*/
 }
 .four {
     grid-area: four;
 }
 .five {
     grid-area: five;
+}
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+.profile-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+.profile-container img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 15px;
+}
+
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-rows: 200px 200px;
+        grid-template-columns: 200px 100px 200px 200px;
+        font-size: 10px;
+        grid-gap: 1rem;
+    }
+    .grid-section {
+        padding: 10px;
+    }
+}
+@media (max-width: 800px) {
+    .attribution {
+        display: none;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid blue;
+        height: 1250px;
+    }
+    .grid-container {
+        width: 250px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+            "one"
+            "two"
+            "four"
+            "five"
+            "three";
+    }
 }
